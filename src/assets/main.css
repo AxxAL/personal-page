@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --shadow-color: #FF9E9E;
+  --shadow-color-light: white;
+}
+
+html {
+  background-color: #000;
+}
+
+
+a:hover {
+  text-decoration: none;
+  color: cornflowerblue;
+  text-shadow:
+    0 0 7px cornflowerblue,
+    0 0 10px cornflowerblue,
+    0 0 21px cornflowerblue,
+    0 0 42px cornflowerblue,
+    0 0 82px cornflowerblue,
+    0 0 92px cornflowerblue,
+    0 0 102px cornflowerblue,
+    0 0 151px cornflowerblue;
+}
+
+@font-face {
+  font-family: "VCR OSD MONO";
+  src: url("/fonts/VCR_OSD_MONO.ttf") format("truetype");
+}
+
+.font-vcr {
+  font-family: "VCR OSD MONO";
+}
+
+.animation-vcr-glow {
+  line-height: 1;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker-glow;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.animation-vcr {
+  line-height: 1;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
+@keyframes textflicker-glow {
+  from {
+    text-shadow:
+      1px 0 0 #ea36af, -2px 0 0 #75fa69,
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #fff,
+      0 0 102px #fff,
+      0 0 151px #fff;
+  }
+  to {
+    text-shadow:
+      2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69,
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #fff,
+      0 0 102px #fff,
+      0 0 151px #fff;
+  }
+}
