@@ -36,7 +36,10 @@
       <h1 class="text-white text-xl sm:text-4xl font-vcr animation-vcr">Salutations.</h1>
       <p class="text-white text-lg sm:text-lg font-vcr animation-vcr">I build software for the web.</p>
       <p class="text-white text-lg sm:text-lg font-vcr animation-vcr">
-        The time is ticking <span @click="secretClicked++">{{ time }}</span>! Go check out my <span class="animation-vcr-glow"><a href="https://github.com/AxxAL" target="_blank">GitHub</a></span> page!
+        The time is ticking <span @click="secretClicked++">{{ time }}</span>! Go check out my <span class="animation-vcr-glow"><a href="https://github.com/AxxAL" target="_blank">GitHub page</a></span>!
+      </p>
+      <p class="text-white text-lg sm:text-lg font-vcr animation-vcr">
+        Or if you're in to art, check out the <span class="animation-vcr-glow"><router-link to="/art">art page</router-link></span>!
       </p>
     </div>
 
